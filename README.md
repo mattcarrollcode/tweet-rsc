@@ -5,15 +5,17 @@ server components to call the Twitter API from a server instead
 of using Twitter's script to embed the tweet on the page. It
 currently caches the result from Twitter's API indefinitely.
 
-Styling for the Tweet component was written by [Lee Robinson](https://leerob.io/) ([source](https://github.com/leerob/leerob.io/blob/e4307827d4e77f1b48f087f0beb8b1112e257019/components/tweet.tsx))
+Styling for the Tweet component was written by [Lee Robinson](https://leerob.io/)
+([source](https://github.com/leerob/leerob.io/blob/e4307827d4e77f1b48f087f0beb8b1112e257019/components/tweet.tsx))
 
 Next steps:
 
-- figure out how to extract this folder into a library
-- make sure to figure out how to embed the tailwind styles when building the library
-- figure out how to include this in a React server component project
-  - instructions on how to include as a server component (should be straight forward)
-  - instructions on how to include as a client component (harder, or maybe impossible if the project doesn't have a server component at the root?), first attempt below:
+- testing
+- linting
+- additional features
+  - Dark mode
+  - styling options
+  - positioning options
 
 ## How to include tweet-rsc in a client component
 

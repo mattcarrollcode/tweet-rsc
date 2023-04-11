@@ -3,7 +3,7 @@ import { use, cache } from "react";
 import { format } from "date-fns";
 import { formatTweetText } from "./tweetUtils";
 import type { TweetResult } from "./tweet.types";
-import "./tailwind.css";
+import "./style.css";
 
 export function Tweet({ id }: { id: string }) {
   const tweet = use(fetchTweetData({ id })) as TweetResult;

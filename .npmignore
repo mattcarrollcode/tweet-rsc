@@ -1,14 +1,13 @@
 # folders
-# Don't distribute example app on NPM
-example-app/
 # Don't distribute source code on NPM (just built code)
 src/
 # Don't distribute node_modules on NPM (just built code)
 node_modules/
+# Don't distribute node_modules on NPM (just built code)
+.vscode/
 
 # files
 .eslintrc.json
 .gitignore
-postcss.config.js
 tailwind.config.js
 tsconfig.json

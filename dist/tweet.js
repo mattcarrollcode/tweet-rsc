@@ -3,7 +3,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { use, cache } from "react";
 import { format } from "date-fns";
 import { formatTweetText } from "./tweetUtils";
-import "./tailwind.css";
+import "./style.css";
 export function Tweet({ id }) {
     const tweet = use(fetchTweetData({ id }));
     return _jsx(TweetView, { tweet: tweet });

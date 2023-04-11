@@ -2,12 +2,11 @@
   "name": "tweet-rsc",
   "version": "0.0.0",
   "main": "./dist/tweet.js",
-  "types": "./dist/tweet.types.d.ts",
+  "types": "./dist/tweet.d.ts",
   "scripts": {
     "dev": "tsc --watch --outDir dist",
-    "build": "tsc --outDir dist && npm run build-tailwind",
-    "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
-    "lint": "eslint src/*.ts*"
+    "build": "rm -rf dist && tsc --outDir dist && npm run build-css",
+    "build-css": "NODE_ENV=production npx tailwindcss -o ./dist/style.css --minify"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
@@ -17,9 +16,6 @@
     "@types/node": "18.15.3",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.38.0",
-    "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "typescript": "^5.0.4"
   }

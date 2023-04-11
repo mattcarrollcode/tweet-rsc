@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import type { TweetResult } from "./tweet.types";
-import "./tailwind.css";
+import "./style.css";
 export declare function Tweet({ id }: {
     id: string;
 }): JSX.Element;
