@@ -1,14 +1,20 @@
+// @ts-expect-error
+import { use, cache } from "react";
 import { format } from "date-fns";
 import { formatTweetText } from "./tweetUtils";
 import type { TweetResult } from "./tweet.types";
+import "./tailwind.css";
 
-export async function Tweet({ id }: { id: string }) {
-  const tweet = (await fetch(
-    `https://cdn.syndication.twimg.com/tweet-result?id=${id}`,
-    { next: { revalidate: false } }
-  ).then((res) => res.json())) as TweetResult;
+export function Tweet({ id }: { id: string }) {
+  const tweet = use(fetchTweetData({ id })) as TweetResult;
   return <TweetView tweet={tweet} />;
 }
+
+const fetchTweetData = cache(({ id }: { id: string }) => {
+  return fetch(`https://cdn.syndication.twimg.com/tweet-result?id=${id}`).then(
+    (res) => res.json()
+  );
+});
 
 export function TweetView({ tweet }: { tweet: TweetResult }) {
   const authorUrl = `https://twitter.com/${tweet.user.screen_name}`;

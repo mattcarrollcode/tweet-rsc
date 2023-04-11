@@ -53,7 +53,6 @@ export function formatTweetText(text: string, entities: Entities | undefined) {
   }
   if (entities?.hashtags) {
     for (const hashtag of entities.hashtags) {
-      console.log(hashtag);
       replacements.push({
         JSXReplacement: (
           <a
