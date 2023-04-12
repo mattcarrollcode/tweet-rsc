@@ -1,5 +1,4 @@
 /node_modules
-/dist
 .vscode
 next-env.d.ts
 .DS_Store

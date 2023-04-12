@@ -1,9 +1,7 @@
 # folders
 # Don't distribute source code on NPM (just built code)
 src/
-# Don't distribute node_modules on NPM (just built code)
 node_modules/
-# Don't distribute node_modules on NPM (just built code)
 .vscode/
 
 # files
@@ -11,3 +9,4 @@ node_modules/
 .gitignore
 tailwind.config.js
 tsconfig.json
+twitter-api.md
